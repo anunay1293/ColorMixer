@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/seekBar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="49dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:text=""
+        android:thumbTint="#F44336"
+        android:trackTint="#F44336"
+        app:layout_constraintBottom_toTopOf="@+id/switch2"
+        app:layout_constraintEnd_toStartOf="@id/seekBar1"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="49dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:text=""
+        android:thumbTint="#8BC34A"
+        android:trackTint="#8BC34A"
+        app:layout_constraintBottom_toTopOf="@id/switch3"
+        app:layout_constraintEnd_toStartOf="@id/seekBar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch1" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="49dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:text=""
+        android:thumbTint="#2196F3"
+        android:trackTint="#2196F3"
+        app:layout_constraintBottom_toTopOf="@id/reset"
+        app:layout_constraintEnd_toStartOf="@id/seekBar3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch3" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:max="255"
+        android:min="0"
+        android:progressBackgroundTint="#EC0808"
+
+        android:progressTint="#EC0808"
+        android:thumbTint="#EC0808"
+
+        app:layout_constraintBottom_toBottomOf="@id/switch1"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText1"
+        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintTop_toTopOf="@id/switch1" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:max="255"
+        android:min="0"
+        android:progressBackgroundTint="#8BC34A"
+        android:progressTint="#8BC34A"
+        android:thumbTint="#8BC34A"
+        app:layout_constraintBottom_toBottomOf="@id/switch2"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText2"
+        app:layout_constraintStart_toEndOf="@+id/switch2"
+        app:layout_constraintTop_toTopOf="@id/switch2" />
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:max="255"
+        android:min="0"
+        android:progressBackgroundTint="#2196F3"
+        android:progressTint="#2196F3"
+        android:thumbTint="#2196F3"
+        app:layout_constraintBottom_toBottomOf="@id/switch3"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText3"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toEndOf="@+id/switch3"
+        app:layout_constraintTop_toTopOf="@id/switch3"
+        app:layout_constraintVertical_bias="0.686" />
+
+    <EditText
+        android:id="@+id/editTextText1"
+        android:layout_width="96dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/switch1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBar1"
+        app:layout_constraintTop_toTopOf="@id/switch1"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="96dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/switch2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBar2"
+        app:layout_constraintTop_toTopOf="@id/switch2" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="96dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/switch3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toEndOf="@+id/seekBar3"
+        app:layout_constraintTop_toTopOf="@id/switch3"
+        app:layout_constraintVertical_bias="0.212" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
